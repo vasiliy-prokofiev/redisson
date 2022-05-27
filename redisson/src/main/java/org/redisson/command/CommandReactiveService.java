@@ -28,6 +28,7 @@ import org.redisson.client.protocol.RedisCommand;
 import org.redisson.connection.ConnectionManager;
 import org.redisson.connection.MasterSlaveEntry;
 
+import org.redisson.reactive.CommandReactiveExecutor;
 import reactor.core.publisher.Flux;
 
 /**
