@@ -16,6 +16,8 @@
 package org.redisson.misc;
 
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.VarHandle;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.net.InetSocketAddress;
@@ -52,10 +54,14 @@ public class URIBuilder {
             throws IOException {
         try {
             Field field = URI.class.getDeclaredField(fieldName);
+
+            var lookup = MethodHandles.privateLookupIn(Field.class, MethodHandles.lookup());
+            VarHandle modifiers = lookup.findVarHandle(Field.class, "modifiers", int.class);
             
-            Field modifiers = Field.class.getDeclaredField("modifiers");
-            modifiers.setAccessible(true);
-            modifiers.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+//            Field modifiers = Field.class.getDeclaredField("modifiers");
+            modifiers.set(field, field.getModifiers() & ~Modifier.FINAL);
+//            modifiers.setAccessible(true);
+//            modifiers.setInt(field, field.getModifiers() & ~Modifier.FINAL);
             
             field.setAccessible(true);
             field.setLong(null, maskValue);
