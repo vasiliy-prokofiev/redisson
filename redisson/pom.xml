@@ -372,7 +372,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.9.0</version>
+                <version>3.16.0</version>
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -409,30 +409,30 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>${source.version}</source>
-                    <target>${source.version}</target>
-                    <optimize>true</optimize>
-                    <showDeprecations>true</showDeprecations>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>process-test-sources</phase>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <configuration>
-                            <fork>true</fork>
-                            <source>${test.source.version}</source>
-                            <target>${test.source.version}</target>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.1</version>-->
+<!--                <configuration>-->
+<!--                    <source>${source.version}</source>-->
+<!--                    <target>${source.version}</target>-->
+<!--                    <optimize>true</optimize>-->
+<!--                    <showDeprecations>true</showDeprecations>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>default-testCompile</id>-->
+<!--                        <phase>process-test-sources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>testCompile</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <fork>true</fork>-->
+<!--                            <source>${test.source.version}</source>-->
+<!--                            <target>${test.source.version}</target>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -451,7 +451,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>5.1.6</version>
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
