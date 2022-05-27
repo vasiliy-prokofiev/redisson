@@ -3,7 +3,7 @@
 
     <groupId>org.redisson</groupId>
     <artifactId>redisson-parent</artifactId>
-    <version>3.7.5</version>
+    <version>3.7.5.fixed</version>
     <packaging>pom</packaging>
 
     <name>Redisson</name>
@@ -27,7 +27,7 @@
         <url>scm:git:git@github.com:redisson/redisson.git</url>
         <connection>scm:git:git@github.com:redisson/redisson.git</connection>
         <developerConnection>scm:git:git@github.com:redisson/redisson.git</developerConnection>
-        <tag>redisson-3.7.5</tag>
+        <tag>redisson-3.7.5.fixed</tag>
     </scm>
 
     <prerequisites>
@@ -134,7 +134,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-bom</artifactId>
-                <version>4.1.27.Final</version>
+                <version>4.1.77.Final</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
