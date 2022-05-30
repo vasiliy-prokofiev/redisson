@@ -177,3 +177,31 @@ FAQs
 
 [Q: Can I use different encoder/decoders for different tasks?](https://github.com/redisson/redisson/wiki/16.-FAQ#q-can-i-use-different-encoderdecoders-for-different-tasks)
 
+
+# UPD
+Версия собирается для поддержки работы со spring-boot и версиями Java 11 и 17.
+
+!!! СБОРКА ДЛЯ JAVA 11!!!  
+Если проект версии ниже Java 11, библиотека работать не будет.
+Используйте оригинальную версию без правок.
+Решены проблемы, из-за которых эта версия не работала с данными технологиями.
+
+Рекомендуемая версия redisson-spring-boot-starter - 3.13.6
+
+Подключение зависимостей:
+#### Gradle
+    // https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter
+    implementation 'org.redisson:redisson-spring-boot-starter:3.13.6'
+
+    implementation('org.redisson:redisson') {
+        version {
+            strictly '3.7.5.fixed'
+        }
+    }
+
+## Сборка проекта
+Для сборки проекта отключены лишние плагины, которые не нужны в данном фиксе.
+
+Для отправки установки в локальный репозиторий использовать следующий скрипт:
+#### CMD
+    mvn install -Darguments=-Dmaven.javadoc.skip=true -Dmaven.javadoc.skip=true -DgenerateReports=false -f pom.xml
