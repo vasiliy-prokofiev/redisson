@@ -60,5 +60,12 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>carx</id>
+            <name>Carx Repository</name>
+            <url>https://nexus.carx-online.com:8081/repository/carx</url>
+        </repository>
+    </distributionManagement>
 
 </project>
