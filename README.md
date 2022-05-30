@@ -172,3 +172,31 @@ YourKit, LLC is the creator of innovative and intelligent tools for profiling
 Java and .NET applications. Take a look at YourKit's leading software products:
 <a href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a> and
 <a href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.
+
+# UPD
+Версия собирается для поддержки работы со spring-boot и версиями Java 11 и 17.
+
+!!! СБОРКА ДЛЯ JAVA 11!!!  
+Если проект версии ниже Java 11, библиотека работать не будет.
+Используйте оригинальную версию без правок.
+Решены проблемы, из-за которых эта версия не работала с данными технологиями.
+
+Рекомендуемая версия redisson-spring-boot-starter - 3.13.6
+
+Подключение зависимостей:
+#### Gradle
+    // https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter
+    implementation 'org.redisson:redisson-spring-boot-starter:3.13.6'
+
+    implementation('org.redisson:redisson') {
+        version {
+            strictly '3.7.5.fixed'
+        }
+    }
+
+## Сборка проекта
+Для сборки проекта отключены лишние плагины, которые не нужны в данном фиксе.
+
+Для отправки установки в локальный репозиторий использовать следующий скрипт:
+#### CMD
+    mvn install -Darguments=-Dmaven.javadoc.skip=true -Dmaven.javadoc.skip=true -DgenerateReports=false -f pom.xml
