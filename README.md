@@ -200,3 +200,16 @@ Java and .NET applications. Take a look at YourKit's leading software products:
 Для отправки установки в локальный репозиторий использовать следующий скрипт:
 #### CMD
     mvn install -Darguments=-Dmaven.javadoc.skip=true -Dmaven.javadoc.skip=true -DgenerateReports=false -f pom.xml
+
+## Deploy
+Для деплоя на сервер необходимо в родительский pom.xml добавить репозиторий в который будет произовадится деплой
+### pom.xml
+    <distributionManagement>
+        <repository>
+            <id>corp1</id>
+            <name>Corporate Repository</name>
+            <url>https://server:port/repository/repo</url>
+        </repository>
+    </distributionManagement>
+#### CMD
+    mvn deploy -Darguments=-Dmaven.javadoc.skip=true -Dmaven.javadoc.skip=true -DgenerateReports=false -f pom.xml
