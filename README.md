@@ -130,24 +130,6 @@ Quick start
 
 #### Java
 
-```java
-// 1. Create config object
-Config = ...
-
-// 2. Create Redisson instance
-RedissonClient redisson = Redisson.create(config);
-
-// 3. Get object you need
-RMap<MyKey, MyValue> map = redisson.getMap("myMap");
-
-RLock lock = redisson.getLock("myLock");
-
-RExecutorService executor = redisson.getExecutorService("myExecutorService");
-
-// over 30 different objects and services ...
-
-```
-
 <sub>Please consider __[Redisson PRO](https://redisson.pro)__ version for advanced features and support by SLA.</sub>
 
 Downloads
@@ -186,16 +168,16 @@ FAQs
 Используйте оригинальную версию без правок.
 Решены проблемы, из-за которых эта версия не работала с данными технологиями.
 
-Рекомендуемая версия redisson-spring-boot-starter - 3.13.6
+Рекомендуемая версия redisson-spring-boot-starter - 3.15.6
 
 Подключение зависимостей:
 #### Gradle
     // https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter
-    implementation 'org.redisson:redisson-spring-boot-starter:3.13.6'
+    implementation 'org.redisson:redisson-spring-boot-starter:3.15.6'
 
     implementation('org.redisson:redisson') {
         version {
-            strictly '3.7.5.fixed'
+            strictly '3.9.1.fixed'
         }
     }
 
