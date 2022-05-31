@@ -93,8 +93,8 @@
                                             <Implementation-Build>${implementation.build}</Implementation-Build>
                                             <Implementation-Build-Date>${maven.build.timestamp}
                                             </Implementation-Build-Date>
-                                            <X-Compile-Source-JDK>${javac.src.version}</X-Compile-Source-JDK>
-                                            <X-Compile-Target-JDK>${javac.target.version}</X-Compile-Target-JDK>
+                                            <X-Compile-Source-JDK>${java.version}</X-Compile-Source-JDK>
+                                            <X-Compile-Target-JDK>${java.version}</X-Compile-Target-JDK>
                                         </manifestEntries>
                                     </archive>
                                 </configuration>
