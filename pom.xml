@@ -4,7 +4,7 @@
 
     <groupId>org.redisson</groupId>
     <artifactId>redisson-parent</artifactId>
-    <version>3.9.1.fixed</version>
+    <version>3.9.1.fixed.boot3</version>
     <packaging>pom</packaging>
 
     <name>Redisson</name>
@@ -19,12 +19,12 @@
 
     <properties>
         <maven.test.skip>true</maven.test.skip>
-        <source.version>11</source.version>
-        <java.version>11</java.version>
-        <test.source.version>11</test.source.version>
-        <release.version>11</release.version>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.source>11</maven.compiler.source>
+        <source.version>17</source.version>
+        <java.version>17</java.version>
+        <test.source.version>17</test.source.version>
+        <release.version>17</release.version>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
